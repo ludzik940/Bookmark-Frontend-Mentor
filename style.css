@@ -163,6 +163,7 @@ main {
     width: 65%;
     color: hsl(229, 8%, 60%);
     line-height: 1.5;
+    margin-bottom: 25px;
 }
 
 
@@ -191,7 +192,7 @@ main {
     border-bottom: 3px solid hsl(0, 94%, 66%);
 }
 
-.active {
+.active, .def-active {
     border-bottom: 3px solid hsl(0, 94%, 66%);
 }
 
@@ -266,7 +267,8 @@ main {
 
 
 .download--cards {
-    grid-gap: 20px;
+    width: 80%;
+    grid-gap: 2px;
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -332,7 +334,7 @@ main {
 
 }
 .question--panel {
-    width: 60%;
+    width: 55%;
 }
 
 .question > svg {
@@ -341,27 +343,50 @@ main {
 .question > h2 {
     flex-basis: 90%;
     font-weight: 400;
+    margin: 10px 10px;
+}
+
+.question > h2:hover {
+    color: hsl(0, 94%, 66%);
 }
 
 .answer {
     padding: 0 18px;
     display: none;
     overflow: hidden;
+    margin: 20px 0;
+    line-height: 2;
+    color: hsl(229, 8%, 60%);
 }
 
 .question--panel {
-    border-top: 1px solid hsl(229, 8%, 60%);
+    border-top: 1px solid hsl(225, 2%, 65%);
     padding: 15px 0;
 }
 
-.question--panel:nth-child(3) {
-    border-bottom: 1px solid hsl(229, 8%, 60%);
+.question--panel:nth-child(4){
+    border-bottom: 1px solid hsl(225, 2%, 65%);
 }
 
 .hidden {
     display: none;
 }
 
+.show--answer {
+    display: block;
+}
+
+.arrow {
+    margin-top: 10px;
+    font-size: 24px;
+    color: hsl(231, 69%, 60%);
+    padding-right: 15px;
+}
+
+.rotate {
+    color:hsl(0, 94%, 66%);
+    transform: rotate(180deg);
+}
 
 .btn--faq {
     margin-top: 50px;
@@ -398,12 +423,12 @@ main {
 }
 
 .newsletter--input {
-    width: 60%;
+    width: 70%;
     height: 45px;
 }
 
 .newsletter--input > input {
-    flex-basis: 70%;
+    flex-basis: 60%;
     padding: 10px;
     border-radius: 5px;
     outline: none;
@@ -417,10 +442,16 @@ main {
 
 .btn--contact-us {
     background: hsl(0, 94%, 66%);
-    flex-basis: 25%;
+    flex-basis: 30%;
     margin: 0;
     color: white;
     border: none;
+}
+
+.btn--contact-us:hover {
+    color:hsl(0, 94%, 66%);
+    background: #fff;
+    border: 1px solid hsl(0, 94%, 66%);
 }
 
 
