@@ -48,17 +48,34 @@ window.onload = (event) => {
 
 // Email Verification
 
-  const contactBtn = document.querySelector('')
-  const emailInput = document.getElementById('email').value;
-  let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+const contactBtn = document.querySelector('.btn--contact-us');
+  
 
+
+contactBtn.addEventListener('click', (e) => {
+
+  let emailInput = document.querySelector('input[name=newsEmail]').value;
+
+  const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+  const warningParagraph = document.querySelector('.warning--p')
+
+  const warningSign = document.querySelector('.fa-triangle-exclamation');
 
   if(emailInput.match(emailPattern)) {
-    console.log('tak')
-  } else {
-    console.log('nie')
-  }
 
+    warningParagraph.style.display = 'none';
+    document.querySelector('input[name=newsEmail]').style.border = 'none';
+    warningSign.classList.toggle('hidden');
+
+  } else {
+
+    warningParagraph.style.display = 'block';
+    document.querySelector('input[name=newsEmail]').style.border = '3px solid hsl(0, 94%, 66%)';
+    warningSign.classList.toggle('hidden');
+    
+  }
+})
 
 
 };
